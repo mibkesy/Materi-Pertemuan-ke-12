@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Aplikasi-Website-Penghitung Nilai (Grade)-Mahasiswa</title>
+	<style type="text/css">
+		body {
+			background: rgb(2, 0, 46);
+			background: linear-gradient(to bottom, #0477c2 0%, rgba(0,212,255,1)100);
+			text-align: center;
+			margin-right: 20%;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<h5 align="center">Aplikasi-Website Penghitung Nilai (Grade) Mahasiswa</h5>
+		<br><br>
+		<form action="#" id="myForm">
+			Nama<input type="text" id="nama" id="nama_in" size="75">
+			<br><br>
+			Absensi<input type="text" id="n1" size="75">
+			<br><br>
+			Tugas<input type="text" id="n2" size="75">
+			<br><br>
+			UTS<input type="text" id="n3" size="75">
+			<br><br>
+			UAS<input type="text" id="n4" size="75">
+			<br><br>
+
+			<input type="button" onclick="data()" value="simpan"> 
+			<input type="button" name="reset" value="clear">
+			<input type="submit" value="hitung">
+			<input type="submit" value="nilai">
+			
+			<!--Output -->
+				<p id="nama_out"></p>
+				<p id="Absensi_out"></p>
+				<p id="Tugas_out"></p>
+				<p id="uts_out"></p>
+				<p id="uas_out"></p>
+				<br><br>
+				<p id="note"></p>
+				<p id="ket_absensi"></p>
+				<p id="ket_tugas"></p>
+				<p id="ket_uts"></p>
+				<p id="ket_uas"></p>
+
+				<p id="jumlah_out"></p>
+				<br><br>
+				<p id="grade_out"></p>
+		</form>
+		<br><br>
+
+		<script type="text/javascript">
+			function data() {
+				var nama m1 = document.getElementById('nama_in').value
+				var m1 = document.getElementById('n1').value;
+				var m2 = document.getElementById('n2').value;
+				var m3 = document.getElementById('n3').value;
+				var m4 = document.getElementById('n4').value;
+
+				absensi = ((m1/24)*0.1)*100;
+				tugas = 0.2*m2;
+				uts = 0.3*m3;
+				uas = 0.4*m4;
+
+				jumlah = absensi + tugas + uts + uas;
+
+				var grade;
+
+				if (jumlah > = 80) 
+				{
+					grade = "A";
+			}
+			else if (jumlah > = 70) {
+				grade = "B";
+			}
+			else if (jumlah > = 59) {
+				grade = "C";
+			}
+			else if (jumlah > = 50) {
+				grade = "D";
+			}
+			else
+			{
+				grade = "E";
+			}
+			/*Output*/
+				document.getElementById('nama_out').innerHTML = "Nama: "+nama;
+				document.getElementById('absensi_out').innerHTML = "absensi "+m1;
+				document.getElementById('tugas_out').innerHTML = "tugas "+m2;
+				document.getElementById('uts_out').innerHTML = "uts "+m3;
+				document.getElementById('uas_out').innerHTML = "uas "+m4;
+
+				document.getElementById("note").innerHTML = "Note :";
+				document.getElementById("ket_absensi").innerHTML = " + absensi100; : "+absensi;
+				document.getElementById("ket_tugas").innerHTML = "tugas70% : " + tugas;
+				document.getElementById("ket_uts").innerHTML = "uts 80% : " + uts;
+				document.getElementById("ket_uas").innerHTML = "uas90% : " + uas;
+
+				document.getElementById("jumlah_out").innerHTML = "Jumlah : " + jumlah;
+				document.getElementById("grade_out").innerHTML = "Grade : " + grade;
+			}
+		</script>
+	</div>
+</body>
+</html>

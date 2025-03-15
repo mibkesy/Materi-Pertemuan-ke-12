@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+	<meta charset="utf-8">
+	<title>Aplikasi-Website Berubah Warna</title>
+</head>
+<body>
+	<h2>Hi, semua nya, coba lihat saya, telah berubah warna</h2>
+	<button type="button" id="ubah" value="">ubah</button>
+		<button type="button" id="acak" value="">acak</button><br><br>
+
+		<script type="text/javascript">
+
+		//function ubah warna
+
+
+	const ubah = document.getElementById("rubah");
+
+	rubah.onclick = function() {
+		document.body.classList.toggle('blue');
+	}
+
+	//function acak warna
+
+	const acak = document getElementById("acak");
+
+	acak.addEventListener('click', function()) {
+	}
+
+	const r = Math.round(Math.random() * 255 + 1);
+
+	const g = Math.round(Math.random() * 255 + 1);
+
+	const b = Math.round(Math.random() * 255 + 1);
+
+	document.body.style.backgroundColor = 'rgb('+ r + ', '+ g +', '+ b +')';
+ });
+	//function ketiga
+
+	const sMerah = document.querySelector("input[name=sMerah]");
+
+	sMerah.addEventListener('input', function() {
+		const = sMerah.value;
+		document.body.style.backgroundColor = 'rgb('+ r +', 100, 100)';
+	});
+		//script keren Pointer was move
+
+		document.body.addEventListener('mousemove', function(event) {
+			const yPos = Math.round(event.clientY / window.innerWidth) * 255);
+		document.body.style.backgroundColor = 'rgb(+xPos+', '+yPos+', 90)';
+		}); 
+
+	</script>
+</body>
+</html>
